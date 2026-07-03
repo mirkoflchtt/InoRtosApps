@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Target: ESP8266 (WemosD2)",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/components/**",
+                "${userHome}/esp/ESP8266_RTOS_SDK/components/**",
+                "${userHome}/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include",
+                "${userHome}/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/private"
+            ],
+            "defines": [
+                "CONFIG_IDF_TARGET_ESP8266=1"
+            ],
+            "compilerPath": "${userHome}/.espressif/tools/xtensa-lx106-elf/esp-2020r3-49-gd5524c1-8.4.0/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "Target: ESP32 v6.1 (WemosS3)",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/components/**",
+                "${userHome}/esp/esp-idf-v6.1/components/**"
+            ],
+            "defines": [
+                "CONFIG_IDF_TARGET_ESP32=1"
+            ],
+            "compilerPath": "${userHome}/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp-elf-gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,3 @@
+[submodule "ino-rtos/components/InoRtosLib"]
+	path = ino-rtos/components/InoRtosLib
+	url = ../InoRtosLib

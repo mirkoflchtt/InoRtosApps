@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ESP8266: Build",
+            "type": "shell",
+            "command": "bash -c 'rm -f build/CMakeCache.txt && cp sdkconfig.esp8266 sdkconfig && source ~/esp/ESP8266_RTOS_SDK/export.sh && idf.py build'",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP8266: Flash & Monitor",
+            "type": "shell",
+            "command": "bash -c 'rm -f build/CMakeCache.txt && cp sdkconfig.esp8266 sdkconfig && source ~/esp/ESP8266_RTOS_SDK/export.sh && idf.py -p /dev/ttyUSB0 -b 74880 flash monitor'",
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP8266: Menuconfig",
+            "type": "shell",
+            "command": "bash -c 'cp sdkconfig.esp8266 sdkconfig && source ~/esp/ESP8266_RTOS_SDK/export.sh && idf.py menuconfig && cp sdkconfig sdkconfig.esp8266'",
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32: Build",
+            "type": "shell",
+            "command": "bash -c 'rm -f build/CMakeCache.txt && cp sdkconfig.esp32 sdkconfig && source ~/esp/esp-idf-v6.1/export.sh && idf.py build'",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32: Flash & Monitor",
+            "type": "shell",
+            "command": "bash -c 'rm -f build/CMakeCache.txt && cp sdkconfig.esp32 sdkconfig && source ~/esp/esp-idf-v6.1/export.sh && idf.py -p /dev/ttyUSB0 -b 115200 flash monitor'",
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32: Menuconfig",
+            "type": "shell",
+            "command": "bash -c 'cp sdkconfig.esp32 sdkconfig && source ~/esp/esp-idf-v6.1/export.sh && idf.py menuconfig && cp sdkconfig sdkconfig.esp32'",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean Project (Full)",
+            "type": "shell",
+            "command": "bash -c 'rm -rf build sdkconfig'",
+            "problemMatcher": []
+        }
+    ]
+}
