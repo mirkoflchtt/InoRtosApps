@@ -1,3 +1,3 @@
 [submodule "ino-rtos/components/InoRtosLib"]
 	path = ino-rtos/components/InoRtosLib
-	url = git@github.com:mirkoflchtt/InoRtosLib.git
+	url = ../InoRtosLib.git
